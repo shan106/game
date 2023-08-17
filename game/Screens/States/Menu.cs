@@ -21,13 +21,14 @@ namespace game.Screens.States
         {
             buttont = content.Load<Texture2D>("Background/button");
             button2 = content.Load<Texture2D>("Background/button2");
-            buttonf = content.Load<SpriteFont>("Font");
+            buttonf = content.Load<SpriteFont>("font");
             beginbackg = content.Load<Texture2D>("Background/game");
         }
         public void ButtonDraw(bool nextlevel)
         {
             var button = new Knop(buttont, buttonf);
             var buttonQ = new Knop(buttont, buttonf);
+            
             if (nextlevel)
             {
                 button = new Knop(button2, buttonf)
@@ -47,10 +48,11 @@ namespace game.Screens.States
 
                 buttonQ.clicker += STOP_CLICK;
             }
-            if (!nextlevel)
+            else
             {
                 button = new Knop(buttont, buttonf)
                 {
+
                     pos = new Vector2(430, 200),
                     displaytext = "Nieuw spel",
 
@@ -58,9 +60,10 @@ namespace game.Screens.States
 
                 button.clicker += NEWGameButton_Click;
 
+
                 buttonQ = new Knop(buttont, buttonf)
                 {
-                    pos = new Vector2(430, 250),
+                    pos = new Vector2(430, 300),
                     displaytext = "Exit",
                 };
 
@@ -70,7 +73,10 @@ namespace game.Screens.States
             {
                 button,
                 buttonQ,
+                
+               
             };
+           
         }
         public override void Draw(GameTime gameTime, SpriteBatch sprite)
         {

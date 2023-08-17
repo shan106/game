@@ -117,6 +117,12 @@
 /processorParam:Quality=Best
 /build:Geluid/gamesound.wav
 
+#begin Geluid/jump.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Geluid/jump.wav
+
 #begin Hero/hero.png
 /importer:TextureImporter
 /processor:TextureProcessor

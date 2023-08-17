@@ -45,7 +45,7 @@ namespace game.Screens
             valsstrik = content.Load<Texture2D>("Wereld/dood");
             exit = content.Load<Texture2D>("Wereld/exit");
             hero = new Speler(texture, level.colli, content);
-            spring = content.Load<SoundEffect>("Geluid/gamesound");
+            spring = content.Load<SoundEffect>("Geluid/jump");
             if (!lvl) bgtexture = content.Load<Texture2D>("Background/gameMaountains"); else { bgtexture = content.Load<Texture2D>("Background/gameLandscape"); }
             ex = new Exit(exit, lvl);
             vals = new Val(valsstrik);
